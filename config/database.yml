@@ -9,8 +9,8 @@ development: &development
   database: rails_vue_development
   pool: 5
   username: postgres
-  password:
-  host: db
+  password: rails_vue_db
+  host: localhost
 
 test:
   <<: *development
