@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :book do
-    author nil
-    title "MyString"
-    price ""
+    author
+    price { rand * 15 }
+    title { Faker::Book.title }
   end
 end

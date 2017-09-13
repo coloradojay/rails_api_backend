@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   mount_devise_token_auth_for 'User', at: 'auth'
   namespace :api do
@@ -6,7 +8,7 @@ Rails.application.routes.draw do
       resources :authors do
         resources :books
       end
-      root to: 'authors#index'
     end
   end
+  root 'static_pages#home'
 end
